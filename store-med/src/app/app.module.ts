@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidenavComponent } from './dashboard/sidenav/sidenav.component';
 import { MaindashboardComponent } from './dashboard/main-dashboard/maindashboard.component';
+import { LoadingComponent } from './dashboard/loading/loading.component';
+
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { MaindashboardComponent } from './dashboard/main-dashboard/maindashboard
     DashboardComponent,
     SidenavComponent,
     MaindashboardComponent,
+    LoadingComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
