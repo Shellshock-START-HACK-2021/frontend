@@ -1,0 +1,39 @@
+<div
+  class="d-flex flex-column align-items-center justify-content-around main-dashboard"
+>
+  <div class="white-box">
+    <div class="content">
+      <h2>Welcome to Store-Med, John!</h2>
+      <p>Here's what you have to do...</p>
+    </div>
+
+    <div class="d-flex justify-content-around steps">
+      <img src="../../../assets/Step1.svg" alt="Step 1" />
+      <img src="../../../assets/Step2.svg" alt="Step 2" />
+      <img src="../../../assets/Step3.svg" alt="Step 3" />
+    </div>
+  </div>
+  <div class="white-box instruction">
+    <div class="d-flex justify-content-between align-item-center">
+      <div class="instruction">
+        <h2>
+          Upload your medical report <br />
+          and we will analyze it to extract the <br />
+          main insights for you.
+        </h2>
+      </div>
+      <input type="file" #file>
+      <a  (click)="file.click()"
+        ><div class="rectangle">
+          >
+          <img
+            src="../../../assets/UploadImage.svg"
+            alt="Upload image"
+            class="instruction-image"
+          />
+          >
+        </div></a
+      >
+    </div>
+  </div>
+</div>

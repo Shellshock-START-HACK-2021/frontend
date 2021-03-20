@@ -1,0 +1,13 @@
+@import "../shared/color.scss";
+.sidenav {
+  width: 25%;
+  height: 100vh;
+  background-color: $white;
+  box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+}
+
+.main-dashboard {
+  width: 75%;
+  height: 100vh;
+  background-color: $light-blue;
+}
