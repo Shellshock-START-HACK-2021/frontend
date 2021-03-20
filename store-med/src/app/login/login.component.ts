@@ -42,12 +42,17 @@ export class LoginComponent implements OnInit {
     const body = this.myForm.value;
     this.http.post(this.backendUrl, body, { headers: header }).subscribe(
       (data) => {
-        console.log("SUCCESS");
-        this.authenticationService.setIsAuthenticated();
-        this.router.navigate(['/', 'dashboard']);
+        console.log(data);
+        if (data['error']) {
+          alert('Log in was unsuccessful. Please try again!');
+        } else {
+          this.authenticationService.setIsAuthenticated(true);
+          this.authenticationService.setName(data['name']);
+          this.router.navigate(['/', 'dashboard']);
+        }
       },
       (error) => {
-        alert("Log in was unsuccessful. Please try again!");
+        alert('Log in was unsuccessful. Please try again!');
       }
     );
   }

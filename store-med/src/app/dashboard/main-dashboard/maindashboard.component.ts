@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/authentication-service.service';
 
 @Component({
   selector: 'app-maindashboard',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./maindashboard.component.scss'],
 })
 export class MaindashboardComponent implements OnInit {
-  constructor() {}
+  name;
+  constructor(private authService: AuthenticationService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.name = this.authService.getName();
+  }
 
   openFileUpload() {}
 }

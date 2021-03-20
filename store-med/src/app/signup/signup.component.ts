@@ -49,6 +49,7 @@ export class SignupComponent implements OnInit {
     console.log(body);
     this.http.post(this.backendUrl, body, { headers: header }).subscribe(
       (data) => {
+        console.log(data);
         this.router.navigate(["/", "login"]);
       },
       (error) => {

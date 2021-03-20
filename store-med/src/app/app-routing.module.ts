@@ -6,7 +6,6 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GeneralAuthGuard } from './authentication.guard';
 
-
 const routes: Routes = [
   {
     path: 'dashboard',
