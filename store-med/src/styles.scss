@@ -2,21 +2,41 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 * {
-  font-size: 18px;
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Poppins', sans-serif !important;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
 }
 
-/* ---------------- Colors ----------------- */
-$light-blue: #F2F7FD;
-$blue: #2B5AC9;
-$orange: #F9B56F;
-$grey-blue: #607D8B;
-$dark-grey: #333;
-$white: #FEFEFE;
+/* ---------------- Headers ----------------- */
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 60px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight:500;
+  margin: 0;
+  padding: 0;
+  line-height: 45px;
+}
+
+h3 {
+  font-size: 25px;
+  font-weight:500;
+  margin: 0;
+  padding: 0;
+  line-height: 37.5px;
+}
+
 
 a:link,
 a:visited {
