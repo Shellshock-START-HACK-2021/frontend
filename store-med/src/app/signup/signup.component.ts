@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -21,7 +22,6 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
     this.myForm = this.fb.group({
       name: '',
-      dob: '',
       email: '',
       password: '',
     });
@@ -29,10 +29,6 @@ export class SignupComponent implements OnInit {
 
   get name() {
     return this.myForm.get('name');
-  }
-
-  get dob() {
-    return this.myForm.get('dob');
   }
 
   get email() {
@@ -50,14 +46,13 @@ export class SignupComponent implements OnInit {
   onSubmit() {
     const header = new HttpHeaders({ 'Content-Type': 'application/json' });
     const body = this.myForm.value;
+    console.log(body);
     this.http.post(this.backendUrl, body, { headers: header }).subscribe(
       (data) => {
-        console.log('Sucess');
-        console.log(data);
+        this.router.navigate(["/", "login"]);
       },
       (error) => {
-        console.log('error');
-        console.log(error);
+        alert("Sign up was unsuccessful. Please try again!");
       }
     );
   }

@@ -1,9 +1,12 @@
 <div class="d-flex">
-  <app-sidenav class="sidenav" ></app-sidenav>
-  <div *ngIf="!hasUploadedFile">
-  <app-maindashboard></app-maindashboard>
+  <app-sidenav class="sidenav"></app-sidenav>
+  <div class="blue-background">
+    <div *ngIf="!hasUploadedFile">
+      <app-maindashboard></app-maindashboard>
+    </div>
+    <div *ngIf="hasUploadedFile">
+      <app-loading></app-loading>
+    </div>
   </div>
-  <div *ngIf="hasUploadedFile">
-    <app-loading></app-loading>
-  </div>
+
 </div>

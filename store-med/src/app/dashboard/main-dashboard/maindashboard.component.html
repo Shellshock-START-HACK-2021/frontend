@@ -1,6 +1,4 @@
-<div
-  class="d-flex flex-column align-items-center justify-content-around main-dashboard"
->
+<div class="d-flex flex-column justify-content-around main-dashboard">
   <div class="white-box">
     <div class="content">
       <h2>Welcome to Store-Med, John!</h2>
@@ -13,27 +11,25 @@
       <img src="../../../assets/Step3.svg" alt="Step 3" />
     </div>
   </div>
-  <div class="white-box instruction">
-    <div class="d-flex justify-content-between align-item-center">
-      <div class="instruction">
+  <div class="white-box upload">
+    <div class="d-flex justify-content-around align-items-center">
+      <div class="instruction align-self-start">
         <h2>
-          Upload your medical report <br />
-          and we will analyze it to extract the <br />
+          Upload your medical report
+          and <br /> we will analyze it to extract the <br />
           main insights for you.
         </h2>
       </div>
-      <input type="file" #file>
-      <a  (click)="file.click()"
-        ><div class="rectangle">
-          >
+      <input type="file" #file />
+      <div class="rectangle">
+        <a (click)="file.click()">
           <img
             src="../../../assets/UploadImage.svg"
             alt="Upload image"
             class="instruction-image"
           />
-          >
-        </div></a
-      >
+        </a>
+      </div>
     </div>
   </div>
 </div>

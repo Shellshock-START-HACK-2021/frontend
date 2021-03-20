@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../authentication-service.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,8 @@ export class LoginComponent implements OnInit {
 
     private fb: FormBuilder,
 
-    private http: HttpClient
+    private http: HttpClient,
+    private authenticationService: AuthenticationService
   ) {}
 
   ngOnInit(): void {
@@ -40,12 +42,12 @@ export class LoginComponent implements OnInit {
     const body = this.myForm.value;
     this.http.post(this.backendUrl, body, { headers: header }).subscribe(
       (data) => {
-        console.log('Sucess');
-        console.log(data);
+        console.log("SUCCESS");
+        this.authenticationService.setIsAuthenticated();
+        this.router.navigate(['/', 'dashboard']);
       },
       (error) => {
-        console.log('error');
-        console.log(error);
+        alert("Log in was unsuccessful. Please try again!");
       }
     );
   }
