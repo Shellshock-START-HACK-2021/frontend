@@ -6,8 +6,13 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GeneralAuthGuard } from './authentication.guard';
 import { LoadingComponent } from './dashboard/loading/loading.component';
+import { SummaryComponent } from './dashboard/summary/summary.component';
 
 const routes: Routes = [
+  {
+    path: 'dashboard/summary',
+    component: SummaryComponent,
+  },
   {
     path: 'dashboard/loading',
     component: LoadingComponent,

@@ -12,6 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidenavComponent } from './dashboard/sidenav/sidenav.component';
 import { MaindashboardComponent } from './dashboard/main-dashboard/maindashboard.component';
 import { LoadingComponent } from './dashboard/loading/loading.component';
+import { SummaryComponent } from './dashboard/summary/summary.component';
 
 
 
@@ -25,6 +26,7 @@ import { LoadingComponent } from './dashboard/loading/loading.component';
     SidenavComponent,
     MaindashboardComponent,
     LoadingComponent,
+    SummaryComponent,
   ],
 
   imports: [
