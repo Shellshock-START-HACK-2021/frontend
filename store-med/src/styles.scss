@@ -9,9 +9,17 @@
   max-width: 1140px;
   margin: 0 auto;
 }
+
 a:link,
 a:visited {
   color: white;
   text-decoration: none;
   font-size: 120%;
+  transition: 0.2s border;
+  border: 0;
+}
+
+a:hover,
+a:active {
+  border-bottom: 1 solid blue;
 }
