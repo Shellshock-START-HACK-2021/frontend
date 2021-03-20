@@ -15,20 +15,24 @@
       margin-bottom: 50px;
     }
   }
-  .instruction {
-    padding: 30px;
-    .rectangle {
-      padding: 30px;
-      border: 2px dashed #2b5ac9;
+  .upload {
+    width: 80%;
+    padding: 100px 0;
+    h2 {
+      margin-left: 15px;
     }
-    a {
-      cursor: pointer;
-    }
-    .instruction-image {
-      margin: 0 auto;
-    }
-    input[type="file"] {
-      display: none;
-    }
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .rectangle {
+    padding: 20px;
+    background-color: $light-blue;
+    border: 2px dashed #2b5ac9;
+  }
+  .instruction-image {
+    margin: 0 auto;
   }
 }

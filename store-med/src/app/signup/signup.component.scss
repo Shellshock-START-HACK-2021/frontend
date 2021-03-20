@@ -50,6 +50,7 @@
       padding: 25px;
       border: 3px solid $blue;
     }
+
     .checkbox {
       margin-top: 12px;
       transform: scale(1.75);
@@ -69,10 +70,8 @@
     }
     a:link,
     a:visited {
-      text-decoration: none;
+      text-decoration: underline;
       color: inherit;
-      border: 0;
-      transition: 0.2s border;
     }
     p {
       text-align: center;

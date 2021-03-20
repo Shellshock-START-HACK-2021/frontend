@@ -73,10 +73,8 @@
     }
     a:link,
     a:visited {
-      text-decoration: none;
+      text-decoration: underline;
       color: inherit;
-      border: 0;
-      transition: 0.2s border;
     }
     p {
       text-align: center;
