@@ -9,7 +9,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class SignupComponent implements OnInit {
   myForm: FormGroup;
-  backendUrl = 'https://storemed-dumb.herokuapp.com/auth/signup';
+  backendUrl = 'https://store-med.herokuapp.com/auth/signup';
   constructor(
     private router: Router,
 
