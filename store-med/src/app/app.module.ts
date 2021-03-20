@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SidenavComponent } from './dashboard/sidenav/sidenav.component';
+import { MaindashboardComponent } from './dashboard/main-dashboard/maindashboard.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     SignupComponent,
     LoginComponent,
     DashboardComponent,
+    SidenavComponent,
+    MaindashboardComponent,
   ],
   imports: [
     BrowserModule,
