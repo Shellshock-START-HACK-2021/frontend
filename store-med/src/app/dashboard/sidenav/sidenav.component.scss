@@ -2,7 +2,7 @@
 .sidenav {
   width: 100%;
   margin-top: 40px;
-  height: 80%;
+  height: 100%;
   img {
     width: 50%;
     margin: 0 auto;
@@ -14,9 +14,27 @@
       list-style: none;
     }
   }
-  p {
+
+  .wrapper {
+    margin-top: auto ;
+    margin-left: 30px;
+  }
+  .logout {
+    img {
+      float: left;
+      height: 50px;
+      width: 50px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    a {
+      margin-top: 10px;
+      margin-left: 12px;
+      cursor: pointer;
+    }
+  }
+  .terms {
+    margin-top: 20px;
     text-align: center;
-    margin-top: auto;
-    margin-bottom: 50px;
   }
 }
