@@ -26,6 +26,7 @@ import { LoadingComponent } from './dashboard/loading/loading.component';
     MaindashboardComponent,
     LoadingComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
