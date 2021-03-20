@@ -1,13 +1,38 @@
-<div class="loading">
-  <div class="white-box">
-    <div class="d-flex flex-column">
-      <p>
-        While the system is analysing your medical reports, we will <br />
-        show you the important ages of the process.
-      </p>
-      <img src="../../../assets/Process1.svg" alt="Process 1" />
-      <img src="../../../assets/Process2.svg" alt="Process 2" />
-      <img src="../../../assets/Process3.svg" alt="Process 3" />
+<div class="d-flex justify-content-between">
+  <app-sidenav class="sidenav"></app-sidenav>
+
+  <div class="blue-background">
+    <div class="loading">
+      <div class="white-box">
+        <div class="d-flex flex-column process">
+          <h3>
+            While the system is analysing your medical reports, we will show you
+            the important stages of the process.
+          </h3>
+          <div class="progress">
+
+            <div
+              style="width: 100%"
+              class="progress-bar"
+              role="progressbar"
+              aria-valuenow="100"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >100%</div>
+
+          </div>
+          <div class="img-div">
+            <img src="../../../assets/Process1.svg" alt="Process 1" />
+            <img
+              src="../../../assets/Process2.svg"
+              alt="Process 2"
+              class="process2"
+            />
+            <img src="../../../assets/Process3.svg" alt="Process 3" />
+          </div>
+        </div>
+      </div>
     </div>
+    <img src="../../../assets/Popup.svg" alt="Picture of key lock" class="encrypted">
   </div>
 </div>

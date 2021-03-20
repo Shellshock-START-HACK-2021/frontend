@@ -8,11 +8,33 @@
     margin: 0 auto;
   }
   ul {
-    margin: 0 auto;
-    li {
-      margin-top: 20px;
-      list-style: none;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    .on {
+      width: 120%;
+      padding: 20px;
+      background-color: $blue;
+      color: $white;
     }
+    .off {
+      width: 120%;
+      padding: 20px;
+      background-color: $white;
+      color: $light-grey;
+    }
+    li {
+      width: 100%;
+      margin-bottom: 15px;
+      color: $light-grey;
+      background-color: $white;
+      text-align:middle;
+      list-style:none;
+    }
+    li:first-child {
+      margin-top: 40px;
+    }
+
   }
 
   .wrapper {

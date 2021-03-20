@@ -5,12 +5,17 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GeneralAuthGuard } from './authentication.guard';
+import { LoadingComponent } from './dashboard/loading/loading.component';
 
 const routes: Routes = [
   {
+    path: 'dashboard/loading',
+    component: LoadingComponent,
+  },
+  {
     path: 'dashboard',
     component: DashboardComponent,
-    canActivate: [GeneralAuthGuard],
+    /* canActivate: [GeneralAuthGuard], */
   },
   { path: 'login', component: LoginComponent },
   { path: 'sign-up', component: SignupComponent },
