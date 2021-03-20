@@ -1,2 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-@import "../node_modules/bootstrap/scss/bootstrap.scss"
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+* {
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+a:link,
+a:visited {
+  color: white;
+  text-decoration: none;
+  font-size: 120%;
+}
