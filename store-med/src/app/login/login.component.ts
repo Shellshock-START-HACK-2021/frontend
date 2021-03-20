@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   myForm: FormGroup;
-  backendUrl = 'https://storemed-dumb.herokuapp.com/auth/login';
+  backendUrl = 'https://store-med.herokuapp.com/auth/login';
 
   constructor(
     private router: Router,

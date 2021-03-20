@@ -1,57 +1,96 @@
-<nav class="navbar- navbar-expand-lg bg-dark p-2">
-  <div class="d-flex justify-content-between">
-    <a href="#" class="ml-3 nav-link">Store-Med</a>
-    <a href="#" class="mr-3 nav-link">Contact Us</a>
-  </div>
-</nav>
+<div class="hero-section">
+  <nav>
+    <div class="d-flex justify-content-between align-items-center">
+      <h2>StoreMed</h2>
+      <h2>Contact Us</h2>
+    </div>
+  </nav>
 
-<header>
-  <div class="jumbotron">
-    <div class="d-flex justify-content-around align-items-center mt-5">
+  <header>
+    <div class="d-flex align-items-center justify-content-around">
       <div class="d-flex flex-column hero-text">
-        <h2>Punchline</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-          Vitae quoeos earum, dolorem consectetur rerum non doloremque a quod
-          iure
-          <br />
-          veritatis, minima similique.
-          <br />Fugiat cupiditate deserunt laudantium cumque reprehenderit!
-        </p>
-        <button class="btn btn-primary" type="button" [routerLink]="['/', 'sign-up']" >Get Started</button>
+        <h1>
+          Store it once, and make it <br />
+          readily accessible.
+        </h1>
+        <h2>
+          StoreMed use the latest advances in AI technology <br />
+          to helps bring essential medical information to <br />
+          patients all around the world in an accessible and <br />
+          simplified way.
+        </h2>
+        <button
+          class="btn btn-primary"
+          type="button"
+          [routerLink]="['/', 'sign-up']"
+        >
+          Get Started
+        </button>
       </div>
-      <div class="dot-large"></div>
+      <img
+        src="../../assets/Hero_Image.png"
+        alt="Picture of a clipboard with a checkmark"
+      />
     </div>
-  </div>
-</header>
+  </header>
 
-<section class="section-reasons">
-  <div class="container">
-    <div class="d-flex flex-column">
-      <h2>Why should you use Store-Med?</h2>
-      <div class="d-flex justify-content-between align-items-center mt-3">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          <br />Nulla ultrices urna vitae ligula faucibus, et dapibus lorem
-          imperdiet.
-        </p>
-        <div class="dot-small"></div>
+  <section class="section-reasons">
+    <h1>Why can StoreMed offer you?</h1>
+    <div class="reasons">
+      <div class="d-flex justify-content-around line-box">
+        <div class="d-flex flex-column">
+          <div class="d-flex align-items-center reason1">
+            <p class="numbers">1</p>
+            <h2>Medical record <br />made tidy</h2>
+          </div>
+          <p>
+            Experienced with the anxiety of not being <br />
+            able to find your past medical reports? <br />
+            Avoid any mess it may cause and have it <br />
+            handy whenever you need it.
+          </p>
+        </div>
+        <img src="../../assets/reason1.svg" alt="Picture of documents" />
       </div>
-      <div class="d-flex justify-content-between align-items-center mt-3">
-        <div class="dot-small"></div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />Nulla
-          ultrices urna vitae ligula faucibus, et dapibus lorem imperdiet.
-        </p>
+      <div class="d-flex line-box justify-content-around">
+        <img
+          src="../../assets/reason2.svg"
+          alt="Picture of chart"
+          class="reason2-img"
+        />
+        <div class="d-flex flex-column reason2">
+          <div class="d-flex align-items-center">
+            <p class="numbers">2</p>
+            <h2>
+              No more complex <br />
+              medical jaron
+            </h2>
+          </div>
+          <p>
+            We keep the issue of low health literacy <br />
+            in mind and strive to solve this problem <br />
+            by utilising AI-driven tool to analyse <br />
+            your medical reports.
+          </p>
+        </div>
       </div>
-      <div class="d-flex justify-content-between align-items-center mt-3">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          <br />Nulla ultrices urna vitae ligula faucibus, et dapibus lorem
-          imperdiet.
-        </p>
-        <div class="dot-small"></div>
+      <div class="d-flex justify-content-around line-box reason3">
+        <div class="d-flex flex-column">
+          <div class="d-flex align-items-center">
+            <p class="numbers">3</p>
+            <h2>Better control of <br />your health data</h2>
+          </div>
+          <p>
+            Patient privacy and data security matter <br />
+            to us the most. We guard your health <br />
+            information with encrypted codes and <br />
+            you own full control when you want to share <br />
+            with others.
+          </p>
+        </div>
+        <img src="../../assets/reason3.svg" alt="Picture of a lock." />
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+</div>
