@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InformationServiceService } from '../information-service.service';
 
 @Component({
   selector: 'app-summary-save',
@@ -6,10 +7,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./summary-save.component.scss']
 })
 export class SummarySaveComponent implements OnInit {
-
-  constructor() { }
+  text;
+  entities;
+  definitions;
+  title = null;
+  clicked = false;
+  definitionHeight;
+  definitionWidth;
+  constructor(private informationService:InformationServiceService) { }
 
   ngOnInit(): void {
+    this.informationService.processEntitiesAndDefinition();
+    this.text = this.informationService.getProcessedString();
+    this.entities = this.informationService.getTestEntities();
+    this.definitions = this.informationService.getDefinitions();
+  }
+
+
+  termClicked(event) {
+    console.log(event);
+    if (event.path[0].nodeName == "P") {
+      return ;
+    }
+    const prevTitle = this.title;
+    this.title = event.srcElement.className;
+    this.definitionHeight = event["offsetY"] + 15;
+    console.log(this.definitionHeight);
+    this.definitionWidth = event["offsetX"] + -15;
+    if ((prevTitle == this.title) || !this.clicked) {
+      this.clicked = !this.clicked;
+    } else {
+      this.clicked = true;
+    }
   }
 
 }

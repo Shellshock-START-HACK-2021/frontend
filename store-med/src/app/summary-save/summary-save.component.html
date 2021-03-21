@@ -14,33 +14,31 @@
     </div>
     <div class="white-box summary">
       <h3>Your Simplified Medical Text</h3>
-      <h3>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices
-        urna vitae ligula faucibus, et dapibus
-      </h3>
-      <ul class="summary-info">
-        <li>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          ultrices urna vitae ligula faucibus, et dapibus
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          ultrices urna vitae ligula faucibus, et dapibus
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          ultrices urna vitae ligula faucibus, et dapibus
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          ultrices urna vitae ligula faucibus, et dapibus
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          ultrices urna vitae ligula faucibus, et dapibus
-        </li>
-      </ul>
-    </div>
+      <div class="wrapper" id="summary-info">
+        <div
+          class="definition"
+          *ngIf="clicked"
+          [ngStyle]="{
+            top: definitionHeight + 'px',
+            left: definitionWidth + 'px'
+          }"
+        >
+          <h2>{{ title }}</h2>
+          <ul>
+            <li>
+              {{ definitions[title][0] }}
+            </li>
+            <li *ngIf="definitions[title].length > 1">
+              {{ definitions[title][1] }}
+            </li>
+          </ul>
+        </div>
+        <p
+          [innerHTML]="text"
+          class="summary-text"
+          (click)="termClicked($event)"
+        ></p>
+      </div>
     <div class="white-box notes">
       <h3>Notes</h3>
       <p>
@@ -50,6 +48,5 @@
       <textarea class="form-control"></textarea>
       <button class="btn btn-primary">Save</button>
     </div>
-    <div class="break">&nbsp;</div>
   </div>
 </div>

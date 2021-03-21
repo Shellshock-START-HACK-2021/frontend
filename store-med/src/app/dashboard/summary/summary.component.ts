@@ -41,7 +41,7 @@ export class SummaryComponent implements OnInit {
     const prevTitle = this.title;
     this.title = event.srcElement.className;
     this.definitionHeight = event["offsetY"] + 15;
-    this.definitionWidth = event["offsetX"] + -15;
+    this.definitionWidth = event['offsetX'] - 15;
     if ((prevTitle == this.title) || !this.clicked) {
       this.clicked = !this.clicked;
     } else {

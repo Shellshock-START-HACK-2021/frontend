@@ -34,7 +34,7 @@ export class LoadingComponent implements OnInit, OnDestroy {
   }
 
   navigate() {
-    this.router.navigate(['/', 'dashboard', 'summary', 'save']);
+    this.router.navigate(['/', 'dashboard', 'summary']);
   }
 
 
