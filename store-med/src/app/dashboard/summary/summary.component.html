@@ -2,18 +2,7 @@
   <app-sidenav class="left"></app-sidenav>
   <div class="d-flex flex-column main right">
     <div class="d-flex flex justify-content-around summary-header">
-      <h3>
-        Exam Date:<br />
-        March 19, 2021
-      </h3>
-      <h3>
-        Affilation:<br />
-        Medical Center
-      </h3>
-      <h3>
-        Referring Physician:<br />
-        GunnarHeuser, M.D.
-      </h3>
+      <h2>Your Simplified Medical Text</h2>
     </div>
     <div class="white-box save">
       <h3>Do you want to save this document?</h3>
@@ -23,38 +12,41 @@
       </p>
       <div class="d-flex justify-content-around button-group">
         <button class="btn btn-outline btn-lg">No, thanks</button>
-      <button class="btn btn-primary btn-lg">Save</button>
+        <button class="btn btn-primary btn-lg">Save</button>
       </div>
-
     </div>
     <div class="white-box summary">
-      <h3>Summary of MRI of John Doe</h3>
       <h3>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices
         urna vitae ligula faucibus, et dapibus
       </h3>
-      <ul class="summary-info">
-        <li>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          ultrices urna vitae ligula faucibus, et dapibus
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          ultrices urna vitae ligula faucibus, et dapibus
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          ultrices urna vitae ligula faucibus, et dapibus
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          ultrices urna vitae ligula faucibus, et dapibus
-        </li>
-        <li>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          ultrices urna vitae ligula faucibus, et dapibus
-        </li>
-      </ul>
+      <div id="summary-info">
+        <div class="wrapper">
+          <div
+            class="definition"
+            *ngIf="clicked"
+            [ngStyle]="{
+              top: definitionHeight + 'px',
+              left: definitionWidth + 'px'
+            }"
+          >
+            <h2>{{ title }}</h2>
+            <ul>
+              <li>
+                {{ definitions[title][0] }}
+              </li>
+              <li *ngIf="definitions[title].length > 1">
+                {{ definitions[title][1] }}
+              </li>
+            </ul>
+          </div>
+          <p
+            [innerHTML]="text"
+            class="summary-text"
+            (click)="termClicked($event)"
+          ></p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

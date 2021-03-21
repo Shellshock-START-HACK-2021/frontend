@@ -1,0 +1,110 @@
+@import "../shared/color.scss";
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
+
+.main {
+  background-color: $light-blue;
+  width: 100%;
+  height: 100vh;
+}
+
+button {
+  text-align: center;
+  padding: 12px;
+  border-radius: 7px;
+  font-size: 25px;
+  width: 25%;
+  font-weight: 500;
+}
+
+.summary-icon {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  a {
+    margin-left: 70px;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  button {
+    margin-right: 65px;
+  }
+  .btn-outline {
+    background-color: $white !important;
+    color: $blue !important;
+    border-color: $blue !important;
+    border: 2px solid #2b5ac9 !important;
+    border-radius: 7px !important;
+  }
+}
+
+.summary-header {
+  margin-left: -10px;
+}
+
+.white-box {
+  width: 90%;
+  margin: 0 auto;
+  background-color: $white;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+  border-radius: 30px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-left: 30px;
+  h3 {
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.summary {
+  padding-bottom: 30px;
+}
+.summary-info {
+  margin-top: 50px;
+}
+
+.notes {
+  background-color: $white;
+  padding-bottom: 90px;
+  margin-bottom: 0px;
+  p {
+    margin-bottom: 20px;
+  }
+  button {
+    margin-left: 60%;
+    margin-top: 30px;
+    width: 30%;
+  }
+  textarea {
+    border: 2px solid #2b5ac9;
+    border-radius: 10px;
+    height: 50%;
+    width: 90%;
+  }
+
+
+  .btn-primary {
+    background-color: $blue !important;
+    color: $white !important;
+  }
+}
+
+
+
+
+
+.break {
+  width:100%;
+  height: 100%;
+  padding: 25px;
+  background-color: $light-blue;
+}

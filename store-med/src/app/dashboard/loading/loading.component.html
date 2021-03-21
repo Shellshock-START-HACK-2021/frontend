@@ -12,23 +12,24 @@
           <div class="progress">
 
             <div
-              style="width: 50%"
-              class="progress-bar"
+              [ngStyle]="{'width': progressBarValue + '%'}"
+
+              class="progress-bar progress-bar-animated"
               role="progressbar"
-              aria-valuenow="100"
+              aria-valuenow="30"
               aria-valuemin="0"
               aria-valuemax="100"
-            >50%</div>
+            >{{progressBarValue}}%</div>
 
           </div>
           <div class="img-div">
-            <img src="../../../assets/Process1.svg" alt="Process 1" />
+            <img [src]='pathPrefix + paths[0]' alt="Process 1" class="off"/>
             <img
-              src="../../../assets/Process2.svg"
+              [src]='pathPrefix + paths[1]'
               alt="Process 2"
               class="process2"
             />
-            <img src="../../../assets/Process3.svg" alt="Process 3" />
+            <img [src] = 'pathPrefix + paths[2]' alt="Process 3" />
           </div>
         </div>
       </div>

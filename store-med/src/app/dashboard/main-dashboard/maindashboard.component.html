@@ -20,7 +20,7 @@
           main insights for you.
         </h2>
       </div>
-      <input type="file" #file />
+      <input type="file" #file (change)="handleFileUpload($event.target.files)"/>
       <div class="rectangle">
         <a (click)="file.click()">
           <img

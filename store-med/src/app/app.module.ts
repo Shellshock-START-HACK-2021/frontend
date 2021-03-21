@@ -13,6 +13,9 @@ import { SidenavComponent } from './dashboard/sidenav/sidenav.component';
 import { MaindashboardComponent } from './dashboard/main-dashboard/maindashboard.component';
 import { LoadingComponent } from './dashboard/loading/loading.component';
 import { SummaryComponent } from './dashboard/summary/summary.component';
+import { SummarySaveComponent } from './summary-save/summary-save.component';
+
+
 
 
 
@@ -27,6 +30,7 @@ import { SummaryComponent } from './dashboard/summary/summary.component';
     MaindashboardComponent,
     LoadingComponent,
     SummaryComponent,
+    SummarySaveComponent,
   ],
 
   imports: [
