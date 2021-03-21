@@ -13,15 +13,18 @@ const routes: Routes = [
   {
     path: 'dashboard/summary/save',
     component: SummarySaveComponent,
+    canActivate: [GeneralAuthGuard],
   },
 
   {
     path: 'dashboard/loading',
     component: LoadingComponent,
+    canActivate: [GeneralAuthGuard],
   },
   {
     path: 'dashboard/summary',
     component: SummaryComponent,
+    canActivate: [GeneralAuthGuard],
   },
   {
     path: 'dashboard',
