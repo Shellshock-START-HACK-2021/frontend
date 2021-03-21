@@ -14,13 +14,14 @@ const routes: Routes = [
     path: 'dashboard/summary/save',
     component: SummarySaveComponent,
   },
-  {
-    path: 'dashboard/summary',
-    component: SummaryComponent,
-  },
+
   {
     path: 'dashboard/loading',
     component: LoadingComponent,
+  },
+  {
+    path: 'dashboard/summary',
+    component: SummaryComponent,
   },
   {
     path: 'dashboard',

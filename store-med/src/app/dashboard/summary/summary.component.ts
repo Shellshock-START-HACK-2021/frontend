@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 import { InformationServiceService } from 'src/app/information-service.service';
 
 @Component({
@@ -15,20 +16,25 @@ export class SummaryComponent implements OnInit {
   clicked = false;
   definitionHeight;
   definitionWidth;
-  constructor(private informationService: InformationServiceService) {}
+  constructor(private informationService: InformationServiceService,
+    private router: Router) {}
 
   ngOnInit(): void {
        this.informationService.processEntitiesAndDefinition();
        this.text = this.informationService.getProcessedString();
        this.entities = this.informationService.getTestEntities();
        this.definitions = this.informationService.getDefinitions();
-       console.log(this.definitions);
-       this.clicked = true;
+  }
+
+  toLoading() {
+    this.router.navigateByUrl('/dashboard/loading');
+  }
+
+  toDashboard() {
+    this.router.navigate(['/', 'dashboard']);
   }
 
   termClicked(event) {
-    this.clicked = true;
-
     if (event.path[0].nodeName == "P") {
       return ;
     }
