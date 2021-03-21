@@ -16,18 +16,20 @@ export class SummaryComponent implements OnInit {
   clicked = false;
   definitionHeight;
   definitionWidth;
-  constructor(private informationService: InformationServiceService,
-    private router: Router) {}
+  constructor(
+    private informationService: InformationServiceService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-       this.informationService.processEntitiesAndDefinition();
-       this.text = this.informationService.getProcessedString();
-       this.entities = this.informationService.getTestEntities();
-       this.definitions = this.informationService.getDefinitions();
+    this.informationService.processEntitiesAndDefinition();
+    this.text = this.informationService.getProcessedString();
+    this.entities = this.informationService.getTestEntities();
+    this.definitions = this.informationService.getDefinitions();
   }
 
-  toLoading() {
-    this.router.navigateByUrl('/dashboard/loading');
+  toSummarySave() {
+    this.router.navigateByUrl('/dashboard/summary/save');
   }
 
   toDashboard() {
@@ -35,14 +37,14 @@ export class SummaryComponent implements OnInit {
   }
 
   termClicked(event) {
-    if (event.path[0].nodeName == "P") {
-      return ;
+    if (event.path[0].nodeName == 'P') {
+      return;
     }
     const prevTitle = this.title;
     this.title = event.srcElement.className;
-    this.definitionHeight = event["offsetY"] + 15;
+    this.definitionHeight = event['offsetY'] + 15;
     this.definitionWidth = event['offsetX'] - 15;
-    if ((prevTitle == this.title) || !this.clicked) {
+    if (prevTitle == this.title || !this.clicked) {
       this.clicked = !this.clicked;
     } else {
       this.clicked = true;

@@ -101,37 +101,6 @@ button {
 
 
 
-#summary-info {
-  margin-top: 50px;
-  max-width: 80%;
-  overflow-wrap: break-word;
-
-
-  a {
-    color: #F9B56F !important;
-    border-bottom: inherit !important;
-    transition: border-bottom 0.5s !important;
-    cursor: pointer;
-  }
-  a:hover {
-    border-bottom-color: $orange !important;
-  }
-  .wrapper {
-    position: relative;
-
-  }
-  .definition {
-    background-color: $white;
-    box-shadow: 0px 6px 50px 10px rgba(0, 0, 0, 0.15);
-    width: 25%;
-    height: 30%;
-    padding: 30px;
-    position: absolute;
-    font-size: 20px;
-    font-weight: 400;
-    border-radius: 10px;
-  }
-}
 
 .break {
   width:100%;
