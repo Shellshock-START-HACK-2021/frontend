@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { InformationServiceService } from '../information-service.service';
 
 @Component({
@@ -14,7 +15,8 @@ export class SummarySaveComponent implements OnInit {
   clicked = false;
   definitionHeight;
   definitionWidth;
-  constructor(private informationService:InformationServiceService) { }
+  constructor(private informationService:InformationServiceService,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.informationService.processEntitiesAndDefinition();
@@ -39,6 +41,10 @@ export class SummarySaveComponent implements OnInit {
     } else {
       this.clicked = true;
     }
+  }
+
+  route() {
+    this.router.navigate(['/', 'dashboard']);
   }
 
 }
