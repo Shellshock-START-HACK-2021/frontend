@@ -26,7 +26,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    /* canActivate: [GeneralAuthGuard], */
+    canActivate: [GeneralAuthGuard],
   },
   { path: 'login', component: LoginComponent },
   { path: 'sign-up', component: SignupComponent },
